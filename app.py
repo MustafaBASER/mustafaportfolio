@@ -77,7 +77,7 @@ CV INFORMATION:
 
     try:
         if provider == "gemini":
-            model = model or "gemini-3.6-flash"
+            model = model or "gemini-3.5-flash-lite"
 
             url = (
                 f"https://generativelanguage.googleapis.com/v1beta/models/"
