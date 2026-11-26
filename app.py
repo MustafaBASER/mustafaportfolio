@@ -77,7 +77,7 @@ CV INFORMATION:
 
     try:
         if provider == "gemini":
-            model = model or "gemini-2.5-flash"
+            model = model or "gemini-3.8-flash"
 
             url = (
                 f"https://generativelanguage.googleapis.com/v1beta/models/"
@@ -86,7 +86,7 @@ CV INFORMATION:
 
             response = requests.post(
                 url,
-                params={"key": api_key},
+                headers={"x-goog-api-key": api_key},
                 json={
                     "system_instruction": {
                         "parts": [{"text": system_prompt}]
