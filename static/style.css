@@ -1,0 +1,313 @@
+/* GENERAL SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #0f172a;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0f172a;
+    color: white;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* NAVIGATION BAR */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #1e293b;
+    border-bottom: 1px solid #334155;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav h2 {
+    color: #60a5fa;
+    font-size: 22px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #cbd5e1;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #60a5fa;
+}
+
+/* HERO SECTION */
+
+#home {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#home h1 {
+    font-size: 52px;
+    color: #60a5fa;
+    margin-bottom: 15px;
+}
+
+#home h2 {
+    font-size: 26px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+#home p {
+    font-size: 20px;
+    color: #cbd5e1;
+}
+
+#home button {
+    margin-top: 25px;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3b82f6;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#home button:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+}
+
+/* CONTENT SECTIONS */
+
+.content-section {
+    padding: 80px 10%;
+    text-align: center;
+    background-color: #0f172a;
+}
+
+.content-section h2 {
+    font-size: 36px;
+    color: #60a5fa;
+    margin-bottom: 30px;
+}
+
+.content-section > p {
+    max-width: 800px;
+    margin: auto;
+    color: #cbd5e1;
+    font-size: 18px;
+}
+
+/* CARDS */
+
+.card {
+    background-color: #1e293b;
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 750px;
+    border-radius: 12px;
+    text-align: left;
+    border: 1px solid #334155;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: #60a5fa;
+}
+
+.card h3 {
+    color: #60a5fa;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #cbd5e1;
+}
+
+/* CHATBOT */
+
+.chat-card {
+    max-width: 750px;
+}
+
+.chat-card > p {
+    margin-bottom: 20px;
+}
+
+.chat-log {
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 20px;
+    min-height: 120px;
+    margin-bottom: 20px;
+}
+
+.bot-message {
+    background-color: #1e3a5f;
+    color: #e2e8f0;
+    padding: 12px 16px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#chat-form {
+    display: flex;
+    gap: 10px;
+}
+
+#chat-input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #475569;
+    border-radius: 8px;
+    background-color: #0f172a;
+    color: white;
+    font-size: 15px;
+    outline: none;
+}
+
+#chat-input:focus {
+    border-color: #60a5fa;
+}
+
+#chat-input::placeholder {
+    color: #94a3b8;
+}
+
+#chat-form button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3b82f6;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#chat-form button:hover {
+    background-color: #2563eb;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #1e293b;
+    color: #cbd5e1;
+    border-top: 1px solid #334155;
+}
+
+/* MOBILE RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        padding: 20px 5%;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    #home h1 {
+        font-size: 36px;
+    }
+
+    #home h2 {
+        font-size: 21px;
+    }
+
+    #home p {
+        font-size: 17px;
+    }
+
+    .content-section {
+        padding: 60px 6%;
+    }
+
+    .content-section h2 {
+        font-size: 28px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    #chat-form {
+        flex-direction: column;
+    }
+
+    #chat-form button {
+        width: 100%;
+    }
+}
+/* FORCE CHATBOT TO STAY AT TOP RIGHT */
+
+body #chatbot.chat-fixed {
+    position: fixed !important;
+    top: 110px !important;
+    right: 30px !important;
+    left: auto !important;
+    bottom: auto !important;
+    width: 350px !important;
+    max-height: calc(100vh - 130px) !important;
+    overflow-y: auto !important;
+    z-index: 99999 !important;
+    margin: 0 !important;
+    padding: 15px !important;
+    background-color: #0f172a !important;
+}
+
+@media (max-width: 900px) {
+    body #chatbot.chat-fixed {
+        position: static !important;
+        width: 90% !important;
+        max-height: none !important;
+        margin: 30px auto !important;
+    }
+}
+/* NAVIGATION FIX */
+
+.logo {
+    color: #60a5fa;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
