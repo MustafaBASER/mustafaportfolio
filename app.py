@@ -95,7 +95,7 @@ CV INFORMATION:
                         {"parts": [{"text": message}]}
                     ]
                 },
-                timeout=30
+                timeout=90
             )
 
             response.raise_for_status()
